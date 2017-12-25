@@ -34,6 +34,19 @@ public class HttpRequestWapper extends HttpServletRequestWrapper {
 				System.out.println("****************"+strs[i]+"******************************************************");
 			}
 		}
+		if(name.equals("token")){
+			for(int i=0;i<strs.length;i++)
+			{
+				System.out.println(key+"******************************************************");
+				System.out.println(strs[i]+"******************************************************");
+				byte[] Message = AESUtil.hex2byte(strs[i]);
+				System.out.println(strs[i]+"******************************************************");
+				byte[] decodeMessage = AESUtil.AESJDKDecode(Message, key);
+				System.out.println(key+"******************************************************");
+				strs[i]=new String(decodeMessage);//AES解密
+				System.out.println("****************"+strs[i]+"******************************************************");
+			}
+		}
 		return strs;
 	}
 	public void setKey(String key) {

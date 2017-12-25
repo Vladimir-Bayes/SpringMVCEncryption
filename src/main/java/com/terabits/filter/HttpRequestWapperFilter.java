@@ -37,8 +37,9 @@ public class HttpRequestWapperFilter implements Filter {
 		// place your code here
 
 		// pass the request along the filter chain
-		 request=new HttpRequestWapper((HttpServletRequest)request);
-	     chain.doFilter(request, response);
+		System.out.println("进入filter.doFilter()");
+		request=new HttpRequestWapper((HttpServletRequest)request);
+		chain.doFilter(request, response);
 	}
 
 	/**

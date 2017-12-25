@@ -23,6 +23,8 @@ public class UserMessageInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request,
             HttpServletResponse response, Object handler) throws Exception {
+    	
+    	System.out.println("进入interceptor.preHandle()");
         String key=userDao.getAESKeyByUserId(request.getParameter("id"));
         ((HttpRequestWapper)request).setKey(key);
         return true;

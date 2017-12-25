@@ -14,8 +14,8 @@ public class UserDao {
 
     public UserModel getUserById(String id){
         UserModel user=new UserModel();
-        user.setUserName("MagicWolf");
-        user.setEmail("dai.dongliang@foxmail.com");
+        user.setUserName("Vladimir");
+        user.setEmail("gyang.shines@gmail.com");
         return user;
     }
     
