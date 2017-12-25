@@ -38,6 +38,7 @@ public class HttpRequestWapperFilter implements Filter {
 
 		// pass the request along the filter chain
 		System.out.println("进入filter.doFilter()");
+//		用自定义的HttpRequestWapper类改写Http request
 		request=new HttpRequestWapper((HttpServletRequest)request);
 		chain.doFilter(request, response);
 	}

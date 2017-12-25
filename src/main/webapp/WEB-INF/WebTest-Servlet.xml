@@ -49,13 +49,12 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
-	<mvc:interceptors>  
-	<mvc:interceptor>    
-       <mvc:mapping path="/user/**" />  
-       <bean class="com.terabits.interceptor.UserMessageInterceptor"></bean>    
-   </mvc:interceptor>  
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/user/**" />
+			<bean class="com.terabits.interceptor.UserMessageInterceptor"></bean>
+		</mvc:interceptor>
 	</mvc:interceptors>
 
-	
 </beans>
